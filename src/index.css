@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #245C36;
+  --color-forest-dark: #1A4428;
+  --color-forest-light: #2E7344;
+  --color-leaf: #72A84A;
+  --color-leaf-light: #8DC760;
+  --color-saffron: #D99A32;
+  --color-saffron-light: #F2AE3B;
+  --color-saffron-dark: #B57B1B;
+  --color-cream: #FFF9EC;
+  --color-cream-card: #FFFDF7;
+  --color-cream-dark: #F5ECCE;
+  --color-dark: #263329;
+  --color-dark-muted: #4B594E;
+  
+  --font-devanagari: 'Noto Sans Devanagari', sans-serif;
+  --font-serif-heading: 'Rozha One', 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+}
+
+html[lang="hi"] {
+  font-family: var(--font-devanagari), var(--font-sans);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF9EC;
+  color: #263329;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #72A84A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #245C36;
+}
+
+/* Indian ornamental pattern background utility */
+.bg-mandala-pattern {
+  background-color: #FFF9EC;
+  background-image: radial-gradient(rgba(217, 154, 50, 0.08) 1.5px, transparent 1.5px), radial-gradient(rgba(36, 92, 54, 0.05) 1.5px, #FFF9EC 1.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}
+
+.bg-forest-pattern {
+  background-color: #245C36;
+  background-image: radial-gradient(rgba(217, 154, 50, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle decorative border */
+.border-traditional {
+  border-image: linear-gradient(to right, #D99A32, #72A84A, #D99A32) 1;
+}
+
+/* Glassmorphism */
+.glass-nav {
+  background: rgba(255, 249, 236, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
